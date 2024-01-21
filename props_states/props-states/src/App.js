@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
-import MyFunctionalComponent from './components/comp1';
+import ComponentFunc from './components/comp1';
 import TestComptest from './components/testComptest';
-import DisplayUser from './components/user';
+import {func,DisplayUser} from './components/user';
 
 function App() {
 
@@ -36,13 +36,27 @@ function App() {
       age: 24,
     },
   ];
+
+  //Passing a function to react component
+  function func() {
+    console.log("Yes, I am a function");
+
+    console.log("=======================================");
+   }
+
+
+   function sumfunc() {
+    console.log(23+5);
+   }
   
   return (
     <div className="App">
 
       <header className='App-header'>
-      <DisplayUser users={users} />
       </header>
+
+      <ComponentFunc funcProp={func} />
+      <ComponentFunc funcProp={sumfunc} />
     </div>
   );
 }

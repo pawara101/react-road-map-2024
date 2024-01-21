@@ -18,4 +18,10 @@ function MyFunctionalComponent(props){
     );
 }
 
-export default MyFunctionalComponent;
+function ComponentFunc(props) {
+    const funcProp = props.funcProp;
+    funcProp();
+    return null;
+  }
+
+  export default ComponentFunc;

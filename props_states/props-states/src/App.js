@@ -12,12 +12,36 @@ function App() {
     name: "Pawara ",
     age: 29,
   };
+
+
+  const users = [
+    {
+      id: 0,
+      name: "Chidume Nnamdi",
+      age: 54,
+    },
+    {
+      id: 1,
+      name: "Karim",
+      age: 24,
+    },
+    {
+      id: 2,
+      name: "Bruno",
+      age: 45,
+    },
+    {
+      id: 3,
+      name: "Ola Brown",
+      age: 24,
+    },
+  ];
   
   return (
     <div className="App">
 
       <header className='App-header'>
-      <DisplayUser user={user} />
+      <DisplayUser users={users} />
       </header>
     </div>
   );

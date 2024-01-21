@@ -1,15 +1,21 @@
 import React from "react";
 
 export default function DisplayUser(props) {
-    const user = props.user;
-
+  const user = props.user;
+  const users = props.users;
 
   return (
     <div>
-      <h1>User Details</h1>
-        <img src={user.avtar} ></img>
-        <h3>Name : {user.name}</h3>
-        <h3>Name : {user.age}</h3>
+      {users.map((user) => (
+        <div>
+          <p>
+            Name: <span>{user.name}</span>
+          </p>
+          <p>
+            Age: <span>{user.age}</span>
+          </p>
+        </div>
+      ))}
     </div>
   );
 }

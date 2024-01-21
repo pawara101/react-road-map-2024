@@ -5,6 +5,9 @@ import TestComptest from './components/testComptest';
 import {func,DisplayUser} from './components/user';
 import Gallery from './components/Gallery.js';
 
+// states
+import Helloworld1 from './components/Helloworld1';
+
 function App() {
 
   const user = {
@@ -54,14 +57,8 @@ function App() {
     <div className="App">
 
       <header className='App-header'>
-
-      <h1>scientists</h1>
-      <Gallery />
-      <Gallery />
+        <Helloworld1></Helloworld1>
       </header>
-
-      <ComponentFunc funcProp={func} />
-      <ComponentFunc funcProp={sumfunc} />
 
       
     </div>

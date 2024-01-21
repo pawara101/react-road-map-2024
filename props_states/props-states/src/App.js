@@ -3,6 +3,7 @@ import './App.css';
 import ComponentFunc from './components/comp1';
 import TestComptest from './components/testComptest';
 import {func,DisplayUser} from './components/user';
+import Gallery from './components/Gallery.js';
 
 function App() {
 
@@ -53,10 +54,16 @@ function App() {
     <div className="App">
 
       <header className='App-header'>
+
+      <h1>scientists</h1>
+      <Gallery />
+      <Gallery />
       </header>
-      
+
       <ComponentFunc funcProp={func} />
       <ComponentFunc funcProp={sumfunc} />
+
+      
     </div>
   );
 }

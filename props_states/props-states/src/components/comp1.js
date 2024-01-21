@@ -24,4 +24,4 @@ function ComponentFunc(props) {
     return null;
   }
 
-  export default ComponentFunc;
+export default ComponentFunc;

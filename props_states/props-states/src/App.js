@@ -54,7 +54,7 @@ function App() {
 
       <header className='App-header'>
       </header>
-
+      
       <ComponentFunc funcProp={func} />
       <ComponentFunc funcProp={sumfunc} />
     </div>

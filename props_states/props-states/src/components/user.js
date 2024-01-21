@@ -3,6 +3,7 @@ import React from "react";
 export default function DisplayUser(props) {
   const user = props.user;
   const users = props.users;
+  const children = props.children;
 
   return (
     <div>
@@ -14,6 +15,7 @@ export default function DisplayUser(props) {
           <p>
             Age: <span>{user.age}</span>
           </p>
+          {children}
         </div>
       ))}
     </div>

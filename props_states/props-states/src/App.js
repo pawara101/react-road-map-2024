@@ -7,12 +7,12 @@ import DisplayUser from './components/user';
 function App() {
 
   const user = {
+    avtar : "https://cdn-icons-png.flaticon.com/512/5556/5556499.png",
     id: 0,
     name: "Pawara ",
-    age: 54,
+    age: 29,
   };
   
-
   return (
     <div className="App">
 

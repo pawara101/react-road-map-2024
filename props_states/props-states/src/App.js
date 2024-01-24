@@ -8,7 +8,7 @@ import Gallery from './components/Gallery.js';
 // states
 import Helloworld1 from './components/Helloworld1';
 import Bike from './components/State_Test.js';
-
+import FuncState from './components/State_testFunctional';
 
 function App() {
 
@@ -59,7 +59,7 @@ function App() {
     <div className="App">
 
       <header className='App-header'>
-        <Bike></Bike>
+        <FuncState></FuncState>
       </header>
 
       

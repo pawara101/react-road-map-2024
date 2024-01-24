@@ -43,3 +43,42 @@
   font-size: 16px;
   /* Add other button styles as needed */
 }
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #8ca1c1;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-right: 10px; /* Correct syntax for numeric value without quotes */
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+
+.buttonreset {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #cc4e70;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  
+}
+
+.buttonreset:hover {
+  background-color: #cd1137;
+}

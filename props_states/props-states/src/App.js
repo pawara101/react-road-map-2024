@@ -9,6 +9,7 @@ import Gallery from './components/Gallery.js';
 import Helloworld1 from './components/Helloworld1';
 import Bike from './components/State_Test.js';
 import FuncState from './components/State_testFunctional';
+import CookieShop from './components/Shop';
 
 function App() {
 
@@ -59,7 +60,8 @@ function App() {
     <div className="App">
 
       <header className='App-header'>
-        <FuncState></FuncState>
+        {/* <FuncState></FuncState> */}
+        <CookieShop/>
       </header>
 
       

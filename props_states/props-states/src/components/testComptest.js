@@ -6,6 +6,8 @@ export class TestComptest extends Component {
       <div>testComptest</div>
     )
   }
+
+  
 }
 
 export default TestComptest

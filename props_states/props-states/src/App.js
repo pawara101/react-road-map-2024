@@ -10,6 +10,7 @@ import Helloworld1 from './components/Helloworld1';
 import Bike from './components/State_Test.js';
 import FuncState from './components/State_testFunctional';
 import CookieShop from './components/Shop';
+import ApptestIMM from './components/Immutable.js';
 
 function App() {
 
@@ -61,7 +62,8 @@ function App() {
 
       <header className='App-header'>
         {/* <FuncState></FuncState> */}
-        <CookieShop/>
+        {/* <CookieShop/> */}
+        <ApptestIMM></ApptestIMM>
       </header>
 
       

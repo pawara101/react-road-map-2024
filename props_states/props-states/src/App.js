@@ -12,6 +12,7 @@ import FuncState from './components/State_testFunctional';
 import CookieShop from './components/Shop';
 import ApptestIMM from './components/Immutable.js';
 import Asyncapplication from './components/AsyncApp.js';
+import Main from './components/Main.js';
 
 
 
@@ -64,7 +65,7 @@ function App() {
     <div className="App">
 
       <header className='App-header'>
-        <Asyncapplication></Asyncapplication>
+        <Main></Main>
       </header>
 
       

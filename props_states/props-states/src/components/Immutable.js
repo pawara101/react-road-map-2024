@@ -18,7 +18,7 @@ class ApptestIMM extends Component {
 
     return {
       id: this.state.items.length + 1,
-      value : Math.ceil(Math.random()),
+      value : Math.random(),
     //   value: getRandomInt(10),
     };
   }

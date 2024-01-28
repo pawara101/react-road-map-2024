@@ -11,6 +11,9 @@ import Bike from './components/State_Test.js';
 import FuncState from './components/State_testFunctional';
 import CookieShop from './components/Shop';
 import ApptestIMM from './components/Immutable.js';
+import Asyncapplication from './components/AsyncApp.js';
+
+
 
 function App() {
 
@@ -61,9 +64,7 @@ function App() {
     <div className="App">
 
       <header className='App-header'>
-        {/* <FuncState></FuncState> */}
-        {/* <CookieShop/> */}
-        <ApptestIMM></ApptestIMM>
+        <Asyncapplication></Asyncapplication>
       </header>
 
       

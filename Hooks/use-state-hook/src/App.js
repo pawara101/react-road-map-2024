@@ -1,16 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
-  let count = 0;
 
-  const increasedCount = () =>{
-    count += 1;
+  const [count,setCount] = useState(0); // here 0 is initial value
+
+  // let count = 0;
+
+  const increaseCount = () =>{
+    // count += 1;
+     // right now the count is not rendering to the web page.
+    // for that we use usestate()
+
+    setCount(count+1);
     console.log(count);
   };
 
   function decreaseCount() {
-    count = count - 1;
+    // count = count - 1;
+    setCount(count-1);
+    console.log(count);
   }
 
   return (
@@ -18,7 +27,7 @@ function App() {
       <header className="App-header">
       <span>My Counter</span>
       <p>The count is { count }</p>
-      <button className='button' onClick={ increasedCount }>+</button>
+      <button className='button' onClick={ increaseCount }>+</button>
       <br></br>
       <button className='button' onClick={ decreaseCount }>-</button>
       </header>

@@ -1,37 +1,38 @@
-import './App.css';
-import { useState } from 'react';
+import "./App.css";
+import { useState } from "react";
+import Accordion from "react-bootstrap/Accordion";
 
 function App() {
-
-  const [count,setCount] = useState(0); // here 0 is initial value
-
-  // let count = 0;
-
-  const increaseCount = () =>{
-    // count += 1;
-     // right now the count is not rendering to the web page.
-    // for that we use usestate()
-
-    setCount(count+1);
-    console.log(count);
-  };
-
-  function decreaseCount() {
-    // count = count - 1;
-    setCount(count-1);
-    console.log(count);
-  }
-
   return (
-    <div className="App">
-      <header className="App-header">
-      <span>My Counter</span>
-      <p>The count is { count }</p>
-      <button className='button' onClick={ increaseCount }>+</button>
-      <br></br>
-      <button className='button' onClick={ decreaseCount }>-</button>
-      </header>
+    <div>
       
+      <h1>Hello Boostrap</h1>
+      <Accordion defaultActiveKey="0">
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>Accordion Item #1</Accordion.Header>
+          <Accordion.Body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </Accordion.Body>
+        </Accordion.Item>
+        <Accordion.Item eventKey="1">
+          <Accordion.Header>Accordion Item #2</Accordion.Header>
+          <Accordion.Body>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
     </div>
   );
 }

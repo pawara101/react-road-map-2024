@@ -1,6 +1,8 @@
 import "./App.css";
 import { useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
+import Alert from 'react-bootstrap/Alert';
+import Button from 'react-bootstrap/Button';
 
 function App() {
   return (
@@ -33,7 +35,10 @@ function App() {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
+      <Button variant="danger">Click</Button>
     </div>
+
+    
   );
 }
 

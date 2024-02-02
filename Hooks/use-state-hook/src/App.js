@@ -20,7 +20,7 @@ function App() {
     // inside here add what need to be there.
     //console.log("New count is :", {count});
     console.log(`New count is : ${count}`);
-  },[count] //  [] is dependency array
+  },[count] //  [] is dependency array should be mentioned with the variable
   )
   return (
     <div>

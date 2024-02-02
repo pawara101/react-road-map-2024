@@ -1,21 +1,33 @@
 import "./App.css";
-import { useState } from "react";
-import Accordion from "react-bootstrap/Accordion";
-import Alert from 'react-bootstrap/Alert';
-import Button from 'react-bootstrap/Button';
+import { useState,useEffect } from "react";
 
-// Nav Bar
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-
-//
-import ColorSchemesExample from './components/ColorSchemesExample';
 function App() {
+
+  const  [count,countValue] = useState(0);
+
+  // create function to increase
+  const increaseVal =() => {
+    countValue(count+1);
+    
+  }
+
+  // create function to decrease
+  const decreaseVal =() => {
+    countValue(count-1);
+  }
+
+  useEffect(() =>{
+    // inside here add what need to be there.
+    //console.log("New count is :", {count});
+    console.log(`New count is : ${count}`);
+  },[count] //  [] is dependency array
+  )
   return (
     <div>
-      <ColorSchemesExample></ColorSchemesExample>
+      <h1>count : {count}</h1>
+      <br></br>
+      <button onClick={increaseVal}>Add</button>
+      <button onClick={decreaseVal}>Drop</button>
     </div>
 
     

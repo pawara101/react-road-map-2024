@@ -1,21 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import Loggedin from './Components/Loggedin';
+import LoggedOut from './Components/LoggedOut';
 
-function buttonClick(){
-  console.log("Button clicked");
-  //alert('Clicked');
-}
+const loggedIN = false;
 
-
+const names = ["Nimal","Saman","Kamal"]
 
 function App() {
 
   return (
     <div className="App">
-      <h1>React Event Handling</h1>
-      <br></br><hr></hr>
-      <button onClick={ buttonClick }>Click Here</button>  
-      {/* if i used buttonClick() function will automaticall execute by itself */}
+      {loggedIN && <Loggedin />}
+
+      {!loggedIN && <LoggedOut></LoggedOut>}
     </div>
   );
 }

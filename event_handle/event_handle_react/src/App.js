@@ -5,15 +5,18 @@ import LoggedOut from './Components/LoggedOut';
 
 const loggedIN = false;
 
-const names = ["Nimal","Saman","Kamal"]
+const names = ["Nimal","Saman","Kamal","Jothipala"]
+const nameCount = names.length
 
 function App() {
-
+  console.log(nameCount);
   return (
+    
     <div className="App">
-      {loggedIN && <Loggedin />}
-
-      {!loggedIN && <LoggedOut></LoggedOut>}
+      {nameCount > 0 && names.map((name) =>{
+        return (<ul>{name}</ul>)
+      })}
+      {nameCount == 0 && <p>Nothing provided</p>}
     </div>
   );
 }

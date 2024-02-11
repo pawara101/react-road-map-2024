@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import FetchData from './FetchData';
 
 function App() {
 
@@ -31,22 +32,25 @@ function App() {
 
   
   return (
-    <div className="div1">
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            {product.title}{" "}
-            <img
-              className="images"
-              src={product.image}
-              alt={product.description}
-            ></img>{" "}
-            <span>Price : {product.price}</span>{" "}
-            <span>Rating : {product.rating.rate}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    // <div className="div1">
+    //   <ul>
+    //     {products.map((product) => (
+    //       <li key={product.id}>
+    //         {product.title}{" "}
+    //         <img
+    //           className="images"
+    //           src={product.image}
+    //           alt={product.description}
+    //         ></img>{" "}
+    //         <span>Price : {product.price}</span>{" "}
+    //         <span>Rating : {product.rating.rate}</span>
+    //       </li>
+    //     ))}
+    //   </ul>
+    // </div>
+
+
+    <FetchData></FetchData>
   );
 }
 

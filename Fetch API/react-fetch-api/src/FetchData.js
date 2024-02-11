@@ -21,10 +21,12 @@ function FetchData() {
     fetch(url)
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data);
+        console.log("data");
         GetData(data);
       });
   },[]);
+
+  console.log("============ Fetch Completed =============");
   return (
     <div>
       <ul id="list">

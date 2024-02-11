@@ -13,23 +13,18 @@ const reducer = (state, action) => {
 
 function App() {
   // const [state, dispatch] = useReducer(reducer, initialArg, init?)
-  const [state, setState] = useReducer(reducer, "");
+  const [state, setState] = useReducer(reducer, {
+    name:'',
+    image:'',
+    city:'',
+    position:'',
+  });
   console.log(state);
   return (
     <div>
       <header></header>
       <input type="text" placeholder="Enter your Name"></input>
-      <input
-        type="text"
-        value={state}
-        onChange={(e) =>
-          setState({
-            type: "setImage",
-            data: e.target.value,
-          })
-        }
-        placeholder="Enter Image URL"
-      ></input>
+      <input type="text" placeholder="Enter your City"></input>
       <input type="text" placeholder="Enter your City"></input>
       <input type="text" placeholder="Enter your position"></input>
       <br></br>

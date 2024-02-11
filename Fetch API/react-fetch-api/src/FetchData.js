@@ -10,6 +10,9 @@ function FetchData() {
         console.log(data);
     });
 
+    //Simplified version
+    fetch(url).then((res) => res.json()).then((data) => console.log(data));
+
   return (
     <div>
       

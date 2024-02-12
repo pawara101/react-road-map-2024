@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import FetchData from './FetchData';
+import API_fetch_axios from './Components/API_fetch_axios';
 
 function App() {
 
@@ -50,7 +51,9 @@ function App() {
     // </div>
 
 
-    <FetchData></FetchData>
+    // <FetchData></FetchData>
+    <API_fetch_axios></API_fetch_axios>
+
   );
 }
 

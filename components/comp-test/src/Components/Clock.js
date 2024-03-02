@@ -15,14 +15,21 @@ export class Clock extends Component {
 
     tick() {
         console.log("Timer is running");
+        this.setState({date: new Date()});
     }
 
     componentDidMount() {
         console.log("Mounted");
+        this.timer = setInterval(() => {
+            this.tick()
+        },1000);
     }
 
     componentWillUnmount(){
         console.log("Unmount");
+
+        // to remove the timer
+        clearInterval(this.timer);
     }
 
   render() {

@@ -18,6 +18,8 @@ function UserDetail() {
         .catch((err) => {
             console.error(err);
         });
+
+
     };
 
     useEffect((data) => {
@@ -25,13 +27,28 @@ function UserDetail() {
     },[])
   return (
     <div>
-      <ul>
-        {userInfo.map((user)=> (
-          <li key={user.id}>{user.first_name}
-          <span> {user.last_name}</span>
-          </li>
-        ))}
-      </ul>
+      <table className="user-info-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Profile Image</th>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {userInfo.map((user) => (
+            <tr>
+              <td>{user.id}</td>
+              <td>
+                <img src={user.avatar}></img>
+              </td>
+              <td>{user.first_name} {user.last_name}</td>
+              <td>{user.email}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   )
 }

@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* Target the table itself */
+.user-info-table {
+  border-collapse: collapse; /* Remove borders between cells */
+  width: 100%; /* Set table to full width */
+}
+
+/* Style the table header (<th>) */
+.user-info-table th {
+  text-align: center; /* Align text to the left */
+  padding: 10px; /* Add padding to header cells */
+  background-color: #f2f2f2; /* Set background color for headers */
+  border: 0; /* Set border width to 0 to hide */
+
+}
+
+/* Style the table body (<td>) */
+.user-info-table td {
+  padding: 5px; /* Add padding to data cells */
+  border: 0; /* Set border width to 0 to hide */
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover; /* Optional: to maintain aspect ratio */
+}
+
+.user_name{
+  font-family:Arial, Helvetica, sans-serif;
+}

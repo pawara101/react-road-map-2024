@@ -41,9 +41,9 @@ function UserDetail() {
             <tr>
               <td>{user.id}</td>
               <td>
-                <img src={user.avatar}></img>
+                <img src={user.avatar} className='avatar'></img>
               </td>
-              <td>{user.first_name} {user.last_name}</td>
+              <td className='user_name'>{user.first_name} {user.last_name}</td>
               <td>{user.email}</td>
             </tr>
           ))}

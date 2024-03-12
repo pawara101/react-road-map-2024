@@ -10,6 +10,7 @@ import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
+import Badge from "react-bootstrap/Badge";
 
 function UserDetail() {
     console.log("Start");
@@ -42,6 +43,7 @@ function UserDetail() {
             <th>Profile Image</th>
             <th>Name</th>
             <th>Email</th>
+            <th>Status</th>
           </tr>
         </thead>
         <tbody>
@@ -53,6 +55,7 @@ function UserDetail() {
               </td>
               <td className='user_name'>{user.first_name} {user.last_name}</td>
               <td>{user.email}</td>
+              <td><Badge pill bg="success">Active</Badge></td>
             </tr>
           ))}
         </tbody>

@@ -13,7 +13,7 @@
   }
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -22,9 +22,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
-.App-link {
+/* .App-link {
   color: #61dafb;
 }
 
@@ -35,7 +35,7 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 
 /* Target the table itself */
@@ -48,8 +48,10 @@
 .user-info-table th {
   text-align: center; /* Align text to the left */
   padding: 10px; /* Add padding to header cells */
-  background-color: #f2f2f2; /* Set background color for headers */
+  background-color: #e9c0c0; /* Set background color for headers */
   border: 0; /* Set border width to 0 to hide */
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
 
@@ -59,9 +61,10 @@
   border: 0; /* Set border width to 0 to hide */
 }
 
+
 .avatar {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover; /* Optional: to maintain aspect ratio */
 }

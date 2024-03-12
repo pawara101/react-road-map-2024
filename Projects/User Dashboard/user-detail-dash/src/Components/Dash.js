@@ -1,11 +1,34 @@
-import React from 'react'
-
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 function Dash() {
   return (
     <div>
-      <h1>User Details</h1>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            User Details
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarSupportedContent"
+          >
+
+          </div>
+        </div>
+      </nav>
     </div>
-  )
+  );
 }
 
-export default Dash
+export default Dash;

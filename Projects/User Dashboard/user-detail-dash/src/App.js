@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <Dash></Dash>
+      <br></br>
       <UserDetail></UserDetail>
       <Bottom_Page></Bottom_Page>
     </div>

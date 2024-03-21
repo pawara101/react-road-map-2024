@@ -9,26 +9,24 @@ import Button from "react-bootstrap/Button";
 
 function Dash() {
   return (
-    <Navbar className="Nav_header" bg="dark" data-bs-theme="dark">
+    <Navbar className="Nav_header" bg="dark" data-bs-theme="dark" style={{ width: '100%' }}>
       <Container>
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="me-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
+        <Navbar.Brand href="#home">Members list</Navbar.Brand>
         <Form className="d-flex">
           <Form.Control
             type="search"
-            placeholder="Search"
+            placeholder="Search Members"
             className="me-2"
             aria-label="Search"
+            allign="left"
           />
-          <Button variant="outline-success" style={{ marginRight: "10px" }}>
+          <Button className="searchmember" variant="outline-success">
             Search
           </Button>
-          <Button type="submit">Export to CSV</Button>
+          <Button className="exportcsv" type="submit">Export to csv</Button>
+    
         </Form>
+      
       </Container>
     </Navbar>
   );

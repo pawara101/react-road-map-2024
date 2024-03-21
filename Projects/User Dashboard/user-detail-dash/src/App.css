@@ -78,6 +78,11 @@
   
 }
 
-.Nav_header{
+.searchmember{
+  
+  margin-right: 10px;
+}
 
+.exportcsv{
+  width: 200px;
 }

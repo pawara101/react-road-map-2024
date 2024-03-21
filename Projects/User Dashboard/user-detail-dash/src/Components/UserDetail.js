@@ -12,6 +12,7 @@ import Row from 'react-bootstrap/Row';
 import Table from 'react-bootstrap/Table';
 import Badge from "react-bootstrap/Badge";
 
+
 function UserDetail() {
     console.log("Start");
 
@@ -36,10 +37,10 @@ function UserDetail() {
     },[])
   return (
     <div>
-      <Table className="user-info-table" striped  hover size="sm">
+      <Table className="w-full min-w-max table-auto text-left">
         <thead>
           <tr>
-            <th>#</th>
+            <th>ID</th>
             <th>Profile Image</th>
             <th>Name</th>
             <th>Email</th>

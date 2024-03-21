@@ -11,14 +11,14 @@ function Dash() {
   return (
     <Navbar className="Nav_header" bg="dark" data-bs-theme="dark" style={{ width: '100%' }}>
       <Container>
-        <Navbar.Brand href="#home">Members list</Navbar.Brand>
+        <Navbar.Brand href="#home" className='dashHead'>Members list</Navbar.Brand>
         <Form className="d-flex">
           <Form.Control
             type="search"
             placeholder="Search Members"
-            className="me-2"
             aria-label="Search"
             allign="left"
+            className='dash_search'
           />
           <Button className="searchmember" variant="outline-success">
             Search

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function Bottom_Page() {
   return (
     <div>
-      <Button>Test</Button>
+      <Button>Next Page</Button>
     </div>
   )
 }

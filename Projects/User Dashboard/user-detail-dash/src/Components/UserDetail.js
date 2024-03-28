@@ -13,8 +13,11 @@ import Table from 'react-bootstrap/Table';
 import Badge from "react-bootstrap/Badge";
 
 
+// React Router
+import { BrowserRouter, Route, Routes,useNavigate } from 'react-router-dom'
+
 function UserDetail() {
-    console.log("Start");
+    // console.log("Start");
 
     const [userInfo, setuserInfo] = useState([]);
 
@@ -23,21 +26,26 @@ function UserDetail() {
         .then((resp) => resp.data.data)
         .then((data) => {
           setuserInfo(data);
-          console.log(data);
+          // console.log(data);
         })
         .catch((err) => {
             console.error(err);
         });
+    };
 
-
+    const singleUserRow = (userId) =>{
+      console.log(`Clicked in ${userId}`);
+      console.log(`Fetch data from https://reqres.in/api/users/${userId}`);
     };
 
     useEffect((data) => {
         getInfo();
     },[])
+
+
   return (
     <div>
-      <Table className="w-full min-w-max table-auto text-left">
+      <Table striped hover variant="light">
         <thead>
           <tr>
             <th>ID</th>
@@ -49,7 +57,7 @@ function UserDetail() {
         </thead>
         <tbody>
           {userInfo.map((user) => (
-            <tr>
+            <tr onClick={() => singleUserRow(user.id)}>
               <td>{user.id}</td>
               <td>
                 <Image src={user.avatar} className="avatar" roundedCircle />
@@ -65,4 +73,4 @@ function UserDetail() {
   )
 }
 
-export default UserDetail
+export default UserDetail;

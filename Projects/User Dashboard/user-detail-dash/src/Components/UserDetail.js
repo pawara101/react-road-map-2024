@@ -34,8 +34,13 @@ function UserDetail() {
     };
 
     const singleUserRow = (userId) =>{
-      console.log(`Clicked in ${userId}`);
-      console.log(`Fetch data from https://reqres.in/api/users/${userId}`);
+      // console.log(`Clicked in ${userId}`);
+      // console.log(`Fetch data from https://reqres.in/api/users/${userId}`);
+      axios.get(`https://reqres.in/api/users/${userId}`)
+      .then((resp_user) => resp_user.data.data)
+      .then((data_user) => {
+        console.log(data_user);
+      })
     };
 
     useEffect((data) => {

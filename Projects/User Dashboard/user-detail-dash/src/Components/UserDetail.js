@@ -16,6 +16,9 @@ import Badge from "react-bootstrap/Badge";
 // React Router
 import { BrowserRouter, Route, Routes,useNavigate } from 'react-router-dom'
 
+// Pages
+import SingleUser from "./SingleUser"
+
 function UserDetail() {
     // console.log("Start");
 
@@ -34,13 +37,20 @@ function UserDetail() {
     };
 
     const singleUserRow = (userId) =>{
-      // console.log(`Clicked in ${userId}`);
-      // console.log(`Fetch data from https://reqres.in/api/users/${userId}`);
       axios.get(`https://reqres.in/api/users/${userId}`)
       .then((resp_user) => resp_user.data.data)
       .then((data_user) => {
         console.log(data_user);
       })
+
+
+      return(
+        <Redirect
+        to={{
+          pathname:""
+        }}
+        />
+      )
     };
 
     useEffect((data) => {
@@ -54,15 +64,15 @@ function UserDetail() {
         <thead>
           <tr>
             <th>ID</th>
-            <th>Profile Image</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Status</th>
+            <th>PROFILE IMAGE</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>STATUS</th>
           </tr>
         </thead>
         <tbody>
           {userInfo.map((user) => (
-            <tr onClick={() => singleUserRow(user.id)}>
+            <tr key={user.id} onClick={() => singleUserRow(user.id)}>
               <td>{user.id}</td>
               <td>
                 <Image src={user.avatar} className="avatar" roundedCircle />

@@ -14,7 +14,7 @@ import Badge from "react-bootstrap/Badge";
 
 
 // React Router
-import { BrowserRouter, Route, Routes,useNavigate } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes,useNavigate } from 'react-router-dom'
 
 // Pages
 import SingleUser from "./SingleUser"
@@ -43,14 +43,9 @@ function UserDetail() {
         console.log(data_user);
       })
 
+      // window.location.href = `/user-details.html?id=${userId}`;
+      window.location.href = `/SingleUser.js`;
 
-      return(
-        <Redirect
-        to={{
-          pathname:""
-        }}
-        />
-      )
     };
 
     useEffect((data) => {
@@ -60,6 +55,11 @@ function UserDetail() {
 
   return (
     <div>
+      <Router>
+        <Routes>
+          <Route path='/user_info' element={<SingleUser></SingleUser>}></Route>
+        </Routes>
+      </Router>
       <Table striped hover variant="light">
         <thead>
           <tr>

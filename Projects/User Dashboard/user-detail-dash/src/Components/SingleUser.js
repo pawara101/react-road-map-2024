@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 
 
 function SingleUser() {
-  const { userId } = useParams();
+  
   return (
     <div>
       <h1>Hello</h1>
@@ -11,4 +11,4 @@ function SingleUser() {
   )
 }
 
-export default SingleUser
+export default SingleUser;

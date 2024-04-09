@@ -14,22 +14,19 @@ import Badge from "react-bootstrap/Badge";
 
 
 // React Router
-import { BrowserRouter as Router, Route, Routes,useNavigate } from 'react-router-dom'
+import { BrowserRouter, Route, Routes,useNavigate } from 'react-router-dom'
 
-// Pages
-import SingleUser from "./SingleUser"
 
 function UserDetail() {
-    // console.log("Start");
 
     const [userInfo, setuserInfo] = useState([]);
+    const navigate = useNavigate();
 
     const getInfo = () =>{
         axios.get("https://reqres.in/api/users")
         .then((resp) => resp.data.data)
         .then((data) => {
           setuserInfo(data);
-          // console.log(data);
         })
         .catch((err) => {
             console.error(err);
@@ -43,49 +40,54 @@ function UserDetail() {
         console.log(data_user);
       })
 
-      // window.location.href = `/user-details.html?id=${userId}`;
-      window.location.href = `/SingleUser.js`;
-
     };
 
     useEffect((data) => {
         getInfo();
     },[])
 
-
+    const fetchUserDetails = (userId) => {
+      fetch(`https://reqres.in/api/users/${userId}`)
+        .then((response) => response.json())
+        .then((data) => {
+            alert(JSON.stringify(data.data, null, 2));
+        })
+        .catch((error) => console.log(error));
+    };
   return (
-    <div>
-      <Router>
-        <Routes>
-          <Route path='/user_info' element={<SingleUser></SingleUser>}></Route>
-        </Routes>
-      </Router>
-      <Table striped hover variant="light">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>PROFILE IMAGE</th>
-            <th>NAME</th>
-            <th>EMAIL</th>
-            <th>STATUS</th>
-          </tr>
-        </thead>
-        <tbody>
-          {userInfo.map((user) => (
-            <tr key={user.id} onClick={() => singleUserRow(user.id)}>
-              <td>{user.id}</td>
-              <td>
-                <Image src={user.avatar} className="avatar" roundedCircle />
-              </td>
-              <td className='user_name'>{user.first_name} {user.last_name}</td>
-              <td>{user.email}</td>
-              <td><Badge pill bg="success">Active</Badge></td>
+    <>
+        <Table striped hover variant="light">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>PROFILE IMAGE</th>
+              <th>NAME</th>
+              <th>EMAIL</th>
+              <th>STATUS</th>
             </tr>
-          ))}
-        </tbody>
-      </Table>
-    </div>
-  )
+          </thead>
+          <tbody>
+            {userInfo.map((user) => (
+              <tr key={user.id} onClick={() => navigate(`/user/${user.id}`)} style={{ cursor: 'pointer' }}>
+                <td>{user.id}</td>
+                <td>
+                  <Image src={user.avatar} className="avatar" roundedCircle />
+                </td>
+                <td className="user_name">
+                  {user.first_name} {user.last_name}
+                </td>
+                <td>{user.email}</td>
+                <td>
+                  <Badge pill bg="success">
+                    Active
+                  </Badge>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
+    </>
+  );
 }
 
 export default UserDetail;

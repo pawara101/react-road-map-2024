@@ -74,10 +74,6 @@
 }
 
 
-.bg-body-tertiary{
-  
-}
-
 .dashHead{
   margin-left: -200px;
 }
@@ -87,7 +83,6 @@
 }
 
 .searchmember{
-  
   margin-right: 10px;
 }
 
@@ -97,4 +92,21 @@
 
 .Table_head{
   color: blue;
+}
+
+.single-user-img{
+  width: 30%;
+  height: auto;
+  float: left;
+  padding-left: 100px;
+  padding-top: 50px;
+  padding-right: 20px;
+  
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.user-details-single{
+  
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  font-style: bold;
 }

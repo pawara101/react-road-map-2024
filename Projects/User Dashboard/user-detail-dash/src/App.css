@@ -101,6 +101,7 @@
   padding-left: 100px;
   padding-top: 50px;
   padding-right: 20px;
+  border-radius: 60%;
   
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -109,4 +110,10 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 70px;
   font-style: bold;
+}
+
+/* User Contact Details*/
+.contact-single-user{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
 }

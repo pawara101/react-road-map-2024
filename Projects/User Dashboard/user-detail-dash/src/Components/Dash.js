@@ -11,7 +11,7 @@ function Dash() {
   return (
     <Navbar className="Nav_header" bg="dark" data-bs-theme="dark" style={{ width: '100%' }}>
       <Container>
-        <Navbar.Brand href="#home" className='dashHead'>Members list</Navbar.Brand>
+        <Navbar.Brand href="/" className='dashHead'>Members list</Navbar.Brand>
         <Form className="d-flex">
           <Form.Control
             type="search"

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 function Profile() {
     const Navigate = useNavigate();
@@ -13,4 +13,4 @@ function Profile() {
   )
 }
 
-export default Profile
+export default Profile;

@@ -2,8 +2,13 @@ import React from 'react'
 
 function Main() {
   return (
-    <div>Maincomponent</div>
+    <>
+    <h1>Main Component</h1>
+    <div>
+      <h2>Name</h2>
+    </div>
+    </>
   )
 }
 
-export default Main
+export default Main;

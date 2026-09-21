@@ -33,6 +33,7 @@ class CookieShop extends React.Component {
                 <button class='button' onClick={ this.buyCookie }>
                   Add more Cookies to your cart!!!
                 </button>
+                <div className="main">Myname component</div>
             </div>
         )
     }

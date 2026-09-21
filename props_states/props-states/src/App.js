@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import ComponentFunc from './components/comp1';
 import TestComptest from './components/testComptest';
